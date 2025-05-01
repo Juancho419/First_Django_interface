@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Personas Registradas</title>
+</head>
+<body>
+    <h1>Personas Registradas</h1>
+
+    {% if personas %}
+        <ul>
+            {% for persona in personas %}
+                <li> {{ persona.nombre }} - {{ persona.meta}}</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No hay personas registradas aún.</p>
+    {% endif %}
+</body>
+</html>
